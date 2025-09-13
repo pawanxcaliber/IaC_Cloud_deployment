@@ -3,3 +3,5 @@ services:
     name: simple-static-site
     env: static
     staticPublishPath: .
+    buildCommand: ""
+    startCommand: ""
