@@ -1,6 +1,7 @@
 services:
-  - type: static_site
+  - type: web
     name: simple-static-site
+    env: static
     buildCommand: ""
-    staticPublishPath: "."
+    staticPublishPath: .
     pullRequestPreviewsEnabled: true
