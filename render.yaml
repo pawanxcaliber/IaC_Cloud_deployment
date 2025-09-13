@@ -2,7 +2,4 @@ services:
   - type: web
     name: simple-static-site
     env: static
-    buildCommand: ""
     staticPublishPath: .
-    plan: free
-    pullRequestPreviewsEnabled: true
