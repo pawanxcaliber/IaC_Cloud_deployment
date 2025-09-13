@@ -1,0 +1,35 @@
+name: CI/CD - Simple Static Site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # DevSecOps Skill: Static Code Analysis (Linting HTML)
+      # This step checks your HTML for any syntax errors or bad practices.
+      - name: Lint HTML
+        run: |
+          npm install html-validate
+          ./node_modules/.bin/html-validate index.html
+      
+      # DevOps Skill: Trigger Render Deployment (Commented out for Day 1)
+      # We will uncomment and configure this in Day 2 after we set up Render.
+      # - name: Trigger Render Deployment
+      #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      #   env:
+      #     RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+      #   run: |
+      #     curl --request POST --header "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+      #     --header "Content-Type: application/json" \
+      #     --data '{"serviceId": "your-service-id"}' \
+      #     https://api.render.com/v1/deploys
