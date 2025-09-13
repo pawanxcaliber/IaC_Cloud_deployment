@@ -15,12 +15,6 @@ This project demonstrates a complete DevOps and DevSecOps workflow for deploying
 *   **html-validate**: A static analysis tool for checking HTML code.
     
 
-### Project Structure
-
-The project has a straightforward file structure, with all core files located in the root directory.
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   .  ├── .github  │   └── workflows  │       └── ci.yaml  ├── index.html  ├── package.json  ├── render.yaml  └── styles.css   `
-
 ### CI/CD & DevSecOps
 
 The CI/CD pipeline, defined in ci.yaml, is the core of this project. It ensures that every code change is validated and deployed automatically.
